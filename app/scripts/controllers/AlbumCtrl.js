@@ -1,6 +1,7 @@
 (function() {
-  function AlbumCtrl(Fixtures) {
-    this.albumData = Fixtures.getAlbum();;
+  function AlbumCtrl(Fixtures, SongPlayer) {
+    this.albumData = Fixtures.getAlbum();
+    this.songPlayer = SongPlayer;
     // {
     //     title: 'The Colors',
     //     artist: 'Pablo Picasso',
@@ -19,5 +20,5 @@
 
   angular
       .module('blocJams')
-      .controller('AlbumCtrl', ['Fixtures', AlbumCtrl]);
+      .controller('AlbumCtrl', ['Fixtures', 'SongPlayer', AlbumCtrl]);
 })();
