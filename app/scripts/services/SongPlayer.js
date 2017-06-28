@@ -85,6 +85,13 @@
 
   SongPlayer.currentTime = null;
 
+  /**
+  * @desc current volume
+  * @type {Number} between 0 and 100px
+  */
+
+  SongPlayer.volume = 80;
+
 /**
 * @function SongPlayer.play
 * @desc If the current song is not the same as the selected song, stop the current song and load new audio file,
@@ -167,6 +174,18 @@
         if (currentBuzzObject) {
           currentBuzzObject.setTime(time);
         }
+      };
+
+/**
+* @function setVolume
+* @desc Set volume of song between 0 and 100px
+* @param {Number} between 0 and 100px
+*/
+
+      SongPlayer.setVolume = function(volume) {
+        console.log("helllooooo!");
+        currentBuzzObject.setVolume(volume);
+        SongPlayer.volume = volume;
       };
 
 
